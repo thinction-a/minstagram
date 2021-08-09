@@ -4,7 +4,9 @@
   "description": "minstagram build with Prisma and GraphQL",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node server"
+    "dev": "nodemon --exec babel-node server",
+    "migrate": "prisma migrate dev",
+    "studio": "prisma studio"
   },
   "repository": {
     "type": "git",
@@ -17,13 +19,17 @@
   },
   "homepage": "https://github.com/thinction-a/minstagram#readme",
   "dependencies": {
+    "@prisma/client": "2.28.0",
     "apollo-server": "^3.1.2",
-    "graphql": "^15.5.1"
+    "dotenv": "^10.0.0",
+    "graphql": "^15.5.1",
+    "graphql-tools": "7.0.5",
+    "prisma": "2.28.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.9",
     "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.14.9",
     "nodemon": "^2.0.12"
   }
 }
