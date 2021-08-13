@@ -28,10 +28,28 @@ export default {
       if (!loggedInUser) {
         return false;
       }
-      const exists = await client.user
-        .findUnique({ where: { username: loggedInUser.username } })
-        .following({ where: { id } });
-      return exists.length !== 0;
+      // const exists = await client.user
+      //   .findUnique({ where: { username: loggedInUser.username } })
+      //   .following({ where: { id } });
+      const exists = await client.user.count({
+        where: {
+          username: loggedInUser.username,
+          following: {
+            some: {
+              id,
+            },
+          },
+        },
+      });
+      return Boolean(exists);
     },
+    photos: ({ id }) =>
+      client.user
+        .findUnique({
+          where: {
+            id,
+          },
+        })
+        .photos(),
   },
 };
