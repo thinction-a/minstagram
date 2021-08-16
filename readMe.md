@@ -24,11 +24,24 @@ Instaclone Backend.
  - [X] Search Photos
  - [X] Edit Photo
  - [X] Like / Unlike Photo
- - [ ] See Photo Likes
- - [ ] See Feed
+ - [X] See Photo Likes
+ - [X] See Feed
+ - [X] See Photo Comments
+ - [X] Delete Photo
 
 ## Comments
 
- - [ ] Comment on Photo
- - [ ] Edit Comment
- - [ ] Delete Comment
+ - [X] Comment on Photo
+ - [X] Delete Comment
+ - [X] Edit Comment
+
+## Extras
+
+ - [X] S3 Image Upload
+
+## DMs
+
+ - [X] See Room
+ - [ ] Send Message (Create Room)
+ - [ ] See Rooms
+ - [ ] Realtime Messages

@@ -2,6 +2,6 @@ import { gql } from "apollo-server-core";
 
 export default gql`
   type Mutation {
-    unFollowUser(username: String!): MutationResponse!
+    createComment(photoId: Int!, payload: String!): MutationResponse!
   }
 `;

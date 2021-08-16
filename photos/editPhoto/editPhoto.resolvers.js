@@ -19,7 +19,6 @@ export default {
             },
           },
         });
-        console.log(oldPhoto);
         if (!oldPhoto) {
           return {
             ok: false,
