@@ -3,7 +3,7 @@ import express from "express";
 import { ApolloServer } from "apollo-server-express";
 import { typeDefs, resolvers } from "./schema";
 import { getUser, protectResolver } from "./users/users.utils";
-import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
+// import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { graphqlUploadExpress } from "graphql-upload";
 import logger from "morgan";
 
@@ -19,7 +19,7 @@ const startServer = async () => {
         protectResolver,
       };
     },
-    plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
+    // plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
   });
 
   await apollo.start();
